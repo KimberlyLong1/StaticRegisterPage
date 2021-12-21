@@ -1,0 +1,89 @@
+body {
+    background-color: #76c8ff;
+    margin: 0; /* margin is 0 because the header runs across the whole page */
+    font-family: sans-serif;
+    display: flex;
+    height: 100vh;
+} /* body alone colors the whole page */
+/* next I am specifing the header background should be white */
+header {
+    background-color: white;
+    text-align: right; /* moves text to the right side of the page */
+    padding: .75rem 0; /* gives us a little more space so it doesn't look cramped */
+    border-bottom: solid 1px dimgrey; /* this defines the bottom border of the header box */
+    box-shadow: /* this gives a shadow to the bottom of the header */
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    position: fixed; /* I have to add the width because the position:fixed removes the default width */
+    top: 0;
+    left: 0;
+    width: 100vw;
+} 
+/* next we are going to style the "a" tags in the header */
+header a {
+    color: white;
+    background-color: #13a0ff; /* makes the buttons("a" tags in the header) blue */
+    border: solid 1px gray; /* gives the header buttons a gray border */
+    border-radius: 3px; /* rounds the corner of the buttons */
+    padding: .25rem .5rem; /* pads around the words to the button isn't so tight */
+    margin-right: .5rem; /* moves the button away from the right side of the page */
+    /* line-height adjust the amount of space taken up for the font */
+    line-height: 1.5rem;
+    /* this remove the underline from the tag */
+    text-decoration: none;
+}
+/* now we are going to have the "a" buttons in the header change color when we hover */
+header a:hover, form button:hover { /* I have come back up and added "form button:hover" for the submit button */
+    background-color: #1084d1; /* changes the background color when we hover over the buttons */
+    cursor: pointer; /* creates a pointer when we hover over the header buttons */
+}
+
+.container { /* I specified this container/box in the 2nd div */
+    margin: auto; /* auto allows the browser to calculate equal margins of the sign up box */
+    padding: 1.5rem;
+    background-color: white; /* creates the white background in the sign up box */
+    border: solid 1px gray; /* gives the sign up box a gray border */
+    border-radius: 5px; /* rounds the corner of the sign up box */
+    box-shadow: /* creates a shadow effect around sigh up box */
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container > h1 { /* this section is specifically for the "sign up" header */
+    margin: 0 0 .5rem; /* I need a margin around "sign up" */
+}
+
+/* this section is for getting the buttons from not looking squashed together */
+form input, form button { /* I can combine styling by using a "," */
+    width: 100%;
+    min-width: 300px; /* this made is the sign up container wider */
+    /* Our inputs and forms have differnt default sizes. by changing the box sizing, we can fix this.
+    */
+    box-sizing: border-box; /* now the submit button is the same width as the input boxes */
+    margin: .75rem 0; /* this SEPARATED the input boxes and the submit button */
+    padding: .25rem; /* created equal padding AROUND the input and submit boxes */
+    line-height: 1.5rem; /* made more space INSIDE of the input & submit boxes */
+    font-size: 1em; /* made the font size bigger inside the input & submit boxes */
+    border: solid 1px gray;
+    border-radius: 3px; /* rounded the corners of the input & submit boxes */
+}
+
+/* this section is for styling just the submit button */
+form button {
+    color: white; /* white text */
+    background-color: #13a0ff; /* blue button */
+}
+
+/* this section is for the last section - ONLY for the footer - */
+footer {
+    margin-top: .75; 
+    border-top: solid 1px lightgray; /* created the border line at the top of the footer box */
+    padding-top: 1rem; /* created padding around the icons in the footer box */
+    text-align: center; /* put the icons in the center of the footer box */
+}
+footer img {
+    margin: 0 .5rem; /* created spaces between the icons in the footer */
+}
+footer img:hover {
+    cursor: pointer; /* changes the cursor from an arrow to a pointer */
+}

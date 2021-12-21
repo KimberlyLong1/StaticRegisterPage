@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css" />
     <title>Register Page</title>
 </head>
 <body>
-    
+   <header><!-- This is for the top white box on the page-->
+       <a href="#">About Us</a> <!--We would add a webpage to direct it too-->
+       <a href="#">Log in</a>
+   </header>
+   <!-- Below is for the second white box that holds the information-->
+   <div class="container"> <!-- I specified this div/section is called "container"-->
+        <h1>Sign Up</h1><!-- there are three divs or sections here-->
+        <form>
+            <div>
+                <input type="email" 
+                    placeholder="Email" 
+                    name="email" /><!-- I need 4 types of input fields-->
+            </div><!-- after I put the input tags, I need to separate them with div tags-->
+            <div><!-- adding the div tags will make the stack on each other not in a line-->
+                <input type="text" 
+                    placeholder="Username" 
+                    name="username"
+                    required /><!-- placeholders put the name in the box-->
+            </div>
+            <div>
+                <input type="password" 
+                    placeholder="Password" 
+                    name="username"
+                    required /><!-- name will assign a value "name" attribute. This way the data can be accessed rather than the order -->
+            </div>
+            <div>
+                <input type="password" 
+                    placeholder="Confirm Password" 
+                    name="confirmPassword"
+                    required /><!--THis ensures the infput field has an appropriate value before the form is submitted-->
+            </div>
+            <div>
+                <button type="submit">Submit</button><!-- This is for a basic submit button-->
+            </div>
+        </form>
+        <footer><!-- When I added the icons, they were too big.  I had to make them the same size-->
+            <img src="./assets/amazonLogo.png" alt="Amazon Icon" height="32" width="32" />
+            <img src="./assets/facebookLogo.png" alt="Facebook Icon" height="32" width="32" />
+            <img src="./assets/githubLogo.png" alt="GitHub Icon" height="32" width="32" />
+            <img src="./assets/instagramLogo.png" alt="Instagram Icon" height="32" width="32" />
+            <img src="./assets/slackLogo.png" alt="Slack Icon" height="32" width="32" />
+        </footer>
+   </div>
+
 </body>
 </html>
